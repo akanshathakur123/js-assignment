@@ -16,7 +16,20 @@ Note : U have to use built in methods like map, reduce, find, filter for above q
 </head>
 <body>
 <script type="text/javascript">
-	
+	const agesAr = [3, 56, 12, 18, 34, 16, 35, 12, 19, 18];
+let sum = 0;
+
+for (let i = 0; i < agesAr.length; i++) {
+  if (agesAr[i] >= 18) {
+    sum += agesAr[i];
+  }
+}
+
+console.log(sum);
+
+let ageArr = [3, 56, 12, 18, 34, 16, 35, 12, 19, 18];
+let sumAgeArr = ageArr.filter((a) => a >= 18).reduce((a, b) => a + b);
+console.log(sumAgeArr);
 </script>
 </body>
 </html>

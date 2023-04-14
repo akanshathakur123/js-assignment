@@ -1,0 +1,79 @@
+<!-- // Create a function which will accept salary array as input and finds gratest salary among all salaries and return that salary  : Math.max
+// salary > value : find
+
+// Create a function which will accept name array as input and finds all names which are starting with letter 'P'/'p' and returns
+// new array which contains result : all names // filter
+
+// Create a function which will accept name array as input and finds first name which are statring with letter 'P'/'p' and returns
+// that result : only one  which found first  // find
+
+// Create a function which will accept age array as input. Each age from array should be doubled and saved in new array.
+// Return new array as a result // map -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//1st
+function findHighestSalary(salaries) {
+  let HighestSalary = salaries[0];
+  for (let i = 1; i < salaries.length; i++) {
+    if (salaries[i] > HighestSalary) {
+      HighestSalary = salaries[i];
+    }
+  }
+  return HighestSalary;
+}
+let salaries = [10000000, 40000000, 8000000, 1000500, 2060000];
+let HighestSalary = findHighestSalary(salaries);
+console.log(HighestSalary); 
+
+// 2nd 
+function findNamesStartingWithP(studentnames) {
+  const result = [];
+
+  for (let i = 0; i < studentnames.length; i++) {
+    const pname = studentnames[i];
+    if (pname[0].toLowerCase() === 'p') {
+      result.push(pname);
+    }
+  }
+
+  return result;
+}
+const studentnames = ['parul','alok', 'pratik', 'rajesh', 'rahul', 'prashant'];
+const result = findNamesStartingWithP(studentnames);
+console.log(result);
+
+// 3rd 
+function findFirstPName(studentnames1) {
+  for (let i = 0; i < studentnames1.length; i++) {
+    const onlyPname = studentnames[i];
+    if (onlyPname[0].toLowerCase() === 'p') {
+      return onlyPname;
+    }
+  }
+
+  return null;
+}
+const studentnames1 = ['parul', 'palak','rohan', 'Nancy', 'Nayan', 'Pranit'];
+const result = findFirstPName(studentnames1);
+console.log(result);
+//4th
+function doubleAges(ages) {
+  const result = [];
+
+  for (let i = 0; i < ages.length; i++) {
+    result.push(ages[i] * 2);
+  }
+
+  return result;
+}
+const ages = [20, 30, 40, 50];
+const doubledAges = doubleAges(ages);
+console.log(doubledAges);
+</script>
+</body>
+</html>
